@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start () {
         Points = 0;
+        Debug.Log("Started Game");
 	}
 	
 	// Update is called once per frame
