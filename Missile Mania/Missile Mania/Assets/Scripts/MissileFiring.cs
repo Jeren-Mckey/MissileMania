@@ -1,22 +1,55 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MissileFiring : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		//Reset the position to normal direction
+    public Transform missileSpawn;
+    public Vector2 target;
+    public Vector3 movementVector;
+    public float speed;
+    public Vector3 touchPos;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		//Check for change in direction, if so then update
-	}
-
-    public void rotate()
+    // Use this for initialization
+    void Start()
     {
+   
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Rotate(Vector3.forward * -90);
+        transform.position += (movementVector * Time.deltaTime);
+        transform.up = movementVector;
+        //GetComponent<Rigidbody2D>().velocity = target * speed;
+        DestroyMissile(3.0f);
+    }
+
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name == "anti_missile")
+        {
+            DestroyMissile();
+        }
+    }
+
+    public void DestroyMissile()
+    {
+        Destroy(gameObject);
+    }
+
+    public void DestroyMissile(float time)
+    {
+        Destroy(gameObject, time);
+    }
+
+    public void theStart(Touch myTouch)
+    {   
+        touchPos = myTouch.position;
+        touchPos = Camera.main.ScreenToWorldPoint(touchPos);
+        target = new Vector2(touchPos.x, touchPos.y);
+        movementVector = new Vector2(
+                    touchPos.x - transform.position.x,
+                    touchPos.y - transform.position.y).normalized * speed;
     }
 }
+
