@@ -20,13 +20,12 @@ public class MissileFiring : MonoBehaviour {
         transform.Rotate(Vector3.forward * -90);
         transform.position += (movementVector * Time.deltaTime);
         transform.up = movementVector;
-        //GetComponent<Rigidbody2D>().velocity = target * speed;
         DestroyMissile(3.0f);
     }
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "anti_missile")
+        if (col.gameObject.name == "enemy_missile_prefab")
         {
             DestroyMissile();
         }
