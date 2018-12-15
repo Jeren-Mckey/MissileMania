@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     void Start () {
         Points = 0;
         startTime = Time.time;
-        elapsedTime = 1f;
+        elapsedTime = 2f;
 	}
 	
 	// Update is called once per frame

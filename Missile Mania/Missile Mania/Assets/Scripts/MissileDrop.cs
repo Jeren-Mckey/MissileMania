@@ -19,14 +19,15 @@ public class MissileDrop : MonoBehaviour {
     {
         transform.position += (movementVector * Time.deltaTime);
         transform.up = movementVector;
-        DestroyMissile(8.0f);
+        //OnCollisionEnter2D(collider1);
+        DestroyMissile(15.0f);
     }
-    public void OnCollisionEnter2D(Collision2D col)
+    public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name == "Base_Missile_Prefab")
-        {
+        // if (col.gameObject.name == "Base_Missile_Prefab")
+        //{
             DestroyMissile();
-        }
+       // }
     }
 
     public void DestroyMissile()

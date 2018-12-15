@@ -23,10 +23,12 @@ public class MissileFiring : MonoBehaviour {
         DestroyMissile(3.0f);
     }
 
-    public void OnCollisionEnter2D(Collision2D col)
+    public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name == "enemy_missile_prefab")
+        if (col.gameObject.tag.Equals("enemy"))
         {
+            Animator animation = gameObject.GetComponent<Animator>();
+            animation.Play("Explosion");
             DestroyMissile();
         }
     }

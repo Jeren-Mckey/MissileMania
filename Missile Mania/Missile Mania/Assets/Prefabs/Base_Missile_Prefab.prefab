@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 61060735397400800}
   - component: {fileID: 114398296031120234}
   - component: {fileID: 50120299775187788}
+  - component: {fileID: 95737116743801736}
   m_Layer: 0
   m_Name: Base_Missile_Prefab
   m_TagString: Untagged
@@ -102,7 +103,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.009244144, y: -0.016487524}
@@ -118,6 +119,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.20082083, y: 0.60783005}
   m_EdgeRadius: 0
+--- !u!95 &95737116743801736
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916749611388454}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5daaa2540db3bd94d9b055de053d0c2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114398296031120234
 MonoBehaviour:
   m_ObjectHideFlags: 1
