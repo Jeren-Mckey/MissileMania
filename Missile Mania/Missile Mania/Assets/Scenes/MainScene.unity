@@ -136,8 +136,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174012069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 4.66, z: -0.997953}
-  m_LocalScale: {x: 1.1350949, y: 1.1209062, z: 1.1350949}
+  m_LocalPosition: {x: 1.768, y: 4.66, z: -0.997953}
+  m_LocalScale: {x: 1.2599553, y: 1.1209062, z: 1.1350949}
   m_Children: []
   m_Father: {fileID: 1934635235}
   m_RootOrder: 1
@@ -259,8 +259,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 8.58, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.446, y: 8.58, z: -2}
+  m_LocalScale: {x: 1.11, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 963189239}
   m_RootOrder: 0
@@ -275,7 +275,8 @@ GameObject:
   - component: {fileID: 854228812}
   - component: {fileID: 854228813}
   - component: {fileID: 854228814}
-  m_Layer: 8
+  - component: {fileID: 854228815}
+  m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,8 +290,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 854228811}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 4.22, z: -1.0710286}
-  m_LocalScale: {x: 23.953447, y: 0.96579254, z: 1.0441}
+  m_LocalPosition: {x: 1.424, y: 4.22, z: -1.0710286}
+  m_LocalScale: {x: 26.588327, y: 0.96579254, z: 1.0441}
   m_Children: []
   m_Father: {fileID: 1934635235}
   m_RootOrder: 2
@@ -350,7 +351,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.000000014901161, y: 0}
@@ -366,6 +367,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.963433, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &854228815
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854228811}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &951171618
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,8 +411,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 951171618}
   m_LocalRotation: {x: 0.008726558, y: 0, z: 0, w: 0.999962}
-  m_LocalPosition: {x: 0.42, y: 4.66, z: -0.9646708}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalPosition: {x: 1.768, y: 4.66, z: -0.9646708}
+  m_LocalScale: {x: 1.2210001, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 1977418560}
   m_Father: {fileID: 1934635235}
@@ -684,8 +705,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1758085369}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 8.58, z: 0}
-  m_LocalScale: {x: 1.815, y: 1.3470997, z: 1}
+  m_LocalPosition: {x: 1.397, y: 8.58, z: 0}
+  m_LocalScale: {x: 2.01465, y: 1.3470997, z: 1}
   m_Children: []
   m_Father: {fileID: 1268770238}
   m_RootOrder: 0
@@ -808,8 +829,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a97d08b9973634bb9545a89fc3a208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missileSpawn: {fileID: 1977418560}
-  target: {x: 0, y: 0}
-  movementVector: {x: 0, y: 0, z: 0}
+  Explosion: {fileID: 0}
   speed: 10
-  touchPos: {x: 0, y: 0, z: 0}

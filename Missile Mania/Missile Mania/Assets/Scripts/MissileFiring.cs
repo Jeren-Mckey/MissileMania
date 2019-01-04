@@ -2,21 +2,28 @@
 
 public class MissileFiring : MonoBehaviour {
 
-    public Transform missileSpawn;
-    public Vector2 target;
-    public Vector3 movementVector;
+    private Vector2 target;
+    public GameObject Explosion;
+    private bool isTriggered;
+    private Vector3 movementVector;
     public float speed;
-    public Vector3 touchPos;
+    private Vector3 touchPos;
 
     // Use this for initialization
     void Start()
     {
-   
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isTriggered)
+        {
+            Instantiate(Explosion, transform.position, Quaternion.identity);
+            isTriggered = false;
+            DestroyMissile();
+        }
         transform.Rotate(Vector3.forward * -90);
         transform.position += (movementVector * Time.deltaTime);
         transform.up = movementVector;
@@ -27,14 +34,13 @@ public class MissileFiring : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("enemy"))
         {
-            Animator animation = gameObject.GetComponent<Animator>();
-            animation.Play("Explosion");
-            DestroyMissile();
+            isTriggered = true;
         }
     }
 
     public void DestroyMissile()
     {
+        
         Destroy(gameObject);
     }
 

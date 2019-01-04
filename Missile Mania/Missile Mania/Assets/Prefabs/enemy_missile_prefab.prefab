@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.2
+  Explosion: {fileID: 1361943914504996, guid: 1698d360e2639684bb3d5013d46772bc, type: 2}
 --- !u!212 &212539520716203044
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -208,8 +209,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1600513937
-  m_SortingLayer: 4
+  m_SortingLayerID: 1437283521
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0e4cd1aaca912e24f940b37e09d32b74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

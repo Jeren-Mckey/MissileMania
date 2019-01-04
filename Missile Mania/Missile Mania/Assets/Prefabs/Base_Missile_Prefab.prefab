@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 61060735397400800}
   - component: {fileID: 114398296031120234}
   - component: {fileID: 50120299775187788}
-  - component: {fileID: 95737116743801736}
   m_Layer: 0
   m_Name: Base_Missile_Prefab
   m_TagString: Untagged
@@ -119,24 +118,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.20082083, y: 0.60783005}
   m_EdgeRadius: 0
---- !u!95 &95737116743801736
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1916749611388454}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5daaa2540db3bd94d9b055de053d0c2c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114398296031120234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,11 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a97d08b9973634bb9545a89fc3a208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missileSpawn: {fileID: 4378158024659934}
-  target: {x: 0, y: 0}
-  movementVector: {x: 0, y: 0, z: 0}
+  Explosion: {fileID: 1361943914504996, guid: 1698d360e2639684bb3d5013d46772bc, type: 2}
   speed: 20
-  touchPos: {x: 0, y: 0, z: 0}
 --- !u!212 &212257370305759592
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -231,8 +209,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1437283521
-  m_SortingLayer: 3
+  m_SortingLayerID: -1600513937
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d76f28b0e71d73549a85e6e2f54ff681, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
