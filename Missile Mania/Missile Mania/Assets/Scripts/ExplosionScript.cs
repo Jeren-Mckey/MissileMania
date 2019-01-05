@@ -12,6 +12,7 @@ public class ExplosionScript : MonoBehaviour {
     {
         anim = gameObject.GetComponent<Animator>();
         anim.SetTrigger("StartExplosion");
+        
         hasPlayed = false;
     }
 

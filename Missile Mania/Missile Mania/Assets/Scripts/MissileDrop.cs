@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MissileDrop : MonoBehaviour {
 
@@ -14,6 +15,7 @@ public class MissileDrop : MonoBehaviour {
     void Start ()
     {
         isTriggered = false;
+        DestroyMissile(20);
 	}
 	
 	// Update is called once per frame
@@ -33,7 +35,6 @@ public class MissileDrop : MonoBehaviour {
         if (col.gameObject.name == "Floor")
         {
             isTriggered = true;
-           // DestroyMissile();
         }
         else DestroyMissile();
     }
