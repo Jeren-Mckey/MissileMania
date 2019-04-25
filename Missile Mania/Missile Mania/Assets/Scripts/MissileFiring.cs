@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class MissileFiring : MonoBehaviour {
 
-    private Vector2 target;
     public GameObject Explosion;
     private bool isTriggered;
     private Vector3 movementVector;
@@ -12,7 +13,7 @@ public class MissileFiring : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-       
+     
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class MissileFiring : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("enemy"))
         {
+            GameManager.addPoints();
             isTriggered = true;
         }
     }
@@ -50,13 +52,15 @@ public class MissileFiring : MonoBehaviour {
     }
 
     public void theStart(Touch myTouch)
-    {   
-        touchPos = myTouch.position;
-        touchPos = Camera.main.ScreenToWorldPoint(touchPos);
-        target = new Vector2(touchPos.x, touchPos.y);
-        movementVector = new Vector2(
+    {   if (LauncherVector.getTimeSince() - Time.time < .5)
+        {
+            touchPos = myTouch.position;
+            touchPos = Camera.main.ScreenToWorldPoint(touchPos);
+            movementVector = new Vector2(
                     touchPos.x - transform.position.x,
                     touchPos.y - transform.position.y).normalized * speed;
+            if (movementVector.y < 2f) movementVector.y = 2f;
+        }
     }
 }
 

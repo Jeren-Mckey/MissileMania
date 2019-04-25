@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MissileDrop : MonoBehaviour {
 
     private Vector3 movementVector;
-    public float speed;
     public GameObject Explosion;
     private bool isTriggered;
     private Vector2 positionVector;
@@ -15,7 +14,7 @@ public class MissileDrop : MonoBehaviour {
     void Start ()
     {
         isTriggered = false;
-        DestroyMissile(20);
+        DestroyMissile(30);
 	}
 	
 	// Update is called once per frame
@@ -36,7 +35,7 @@ public class MissileDrop : MonoBehaviour {
         {
             isTriggered = true;
         }
-        else DestroyMissile();
+        else if (col.gameObject.tag != "enemy") DestroyMissile();
     }
 
     public void DestroyMissile()
@@ -49,7 +48,7 @@ public class MissileDrop : MonoBehaviour {
         Destroy(gameObject, time);
     }
 
-    void startDrop()
+    void startDrop(float speed)
     {
         positionVector = (-Vector2.up);
         movementVector = positionVector.normalized * speed;
