@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     public void dropMissile(float newSpeed)
     {
         float spawnY = Random.Range
-            (Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height + 350)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height + 350)).y);
+            (Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height + 100)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height + 100)).y);
         float spawnX = Random.Range
             (Camera.main.ScreenToWorldPoint(new Vector2(15, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width - 15, 0)).x);
         Vector2 spawnPosition = new Vector2(spawnX, spawnY);

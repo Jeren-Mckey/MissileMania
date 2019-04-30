@@ -89,9 +89,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4522322217561668}
   - component: {fileID: 212746974414311788}
-  - component: {fileID: 61229549336625962}
   - component: {fileID: 114586008009235328}
   - component: {fileID: 50983280893935920}
+  - component: {fileID: 205489327082924940}
   m_Layer: 8
   m_Name: enemy_missile_prefab
   m_TagString: enemy
@@ -108,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 1687145456692728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.04, y: 6.8881, z: -0.076669}
-  m_LocalScale: {x: 1.3014809, y: 1.3665549, z: 1.3014809}
+  m_LocalScale: {x: 0.5939664, y: 0.62366474, z: 0.5939664}
   m_Children:
   - {fileID: 4967723020900960}
   m_Father: {fileID: 0}
@@ -162,32 +162,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &61229549336625962
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687145456692728}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.000079236925, y: 0.022714794}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.61, y: 1.36}
-    newSize: {x: 1.8, y: 4.03}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.36754227, y: 0.6854296}
-  m_EdgeRadius: 0
 --- !u!114 &114586008009235328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,3 +196,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &205489327082924940
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687145456692728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.61, y: 1.36}
+    newSize: {x: 1.8, y: 4.03}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.305, y: -0.53999996}
+      - {x: 0.24499999, y: -0.26999998}
+      - {x: 0.16499999, y: -0.24}
+      - {x: 0.155, y: 0.39999998}
+      - {x: 0.125, y: 0.56}
+      - {x: 0.035, y: 0.68}
+      - {x: -0.044999998, y: 0.68}
+      - {x: -0.13499999, y: 0.53999996}
+      - {x: -0.155, y: 0.39999998}
+      - {x: -0.21499999, y: -0.25}
+      - {x: -0.305, y: -0.48}
+      - {x: -0.305, y: -0.68}
+      - {x: 0.16499999, y: -0.68}
+      - {x: 0.175, y: -0.66999996}
+      - {x: 0.305, y: -0.66999996}
