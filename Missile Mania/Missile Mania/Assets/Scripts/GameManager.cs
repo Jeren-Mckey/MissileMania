@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
         speed = 2.8f; //Speed of the rocket
         spawnFastTime = 5f; //How long between spawning of fast rocket
         upDifficulty = false;
-	}
+        gameObject.GetComponent<CameraShake>().enabled = false;
+    }
 	
 	// Update is called once per frame
 	void Update ()
