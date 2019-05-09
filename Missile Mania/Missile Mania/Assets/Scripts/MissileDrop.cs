@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MissileDrop : MonoBehaviour {
 
     private Vector3 movementVector;
     public GameObject Explosion;
+    public Slider slider;
     private bool isTriggered;
     private Vector2 positionVector;
 
@@ -35,7 +37,10 @@ public class MissileDrop : MonoBehaviour {
         {
             isTriggered = true;
         }
-        else if (col.gameObject.tag != "enemy") DestroyMissile();
+        else if (col.gameObject.tag != "enemy"){
+            DestroyMissile();
+            GlobalControl.addProgress();
+        }
     }
 
     public void DestroyMissile()

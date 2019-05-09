@@ -17,15 +17,10 @@ public class GameManager : MonoBehaviour
     public GameObject enemy_missile_prefab;
     public GameObject enemy_parachuter;
 
-    public int Points
-    {
-        get { return _points; }
-        set { _points = value; }
-    }
 
     // Use this for initialization
     void Start () {
-        Points = 0;
+        _points = 0;
         startTime = Time.time; //Time since start or since last difficulty change
         newTime = Time.time; //Time between missile drops
         elapsedTime = 1.6f; //How long before each missile drops
@@ -74,7 +69,7 @@ public class GameManager : MonoBehaviour
     public static void addPoints()
     {
         _points += 1;
-        Scores.addPoints(_points);
+        GlobalControl.addPoints(_points);
     }
 
 }

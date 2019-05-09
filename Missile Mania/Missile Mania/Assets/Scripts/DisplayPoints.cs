@@ -9,7 +9,7 @@ public class DisplayPoints : MonoBehaviour {
     private int points;
 	// Use this for initialization
 	void Start () {
-        points = Scores.points;
+        points = GlobalControl.getPoints();
         text.text = points.ToString();
 	}
 	
