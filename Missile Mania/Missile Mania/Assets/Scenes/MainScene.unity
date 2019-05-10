@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 47412106}
   - component: {fileID: 47412108}
   - component: {fileID: 47412107}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 238372580}
   - component: {fileID: 238372581}
   - component: {fileID: 238372582}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 268103185}
   - component: {fileID: 268103187}
   - component: {fileID: 268103186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286968611}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -633,6 +634,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d59140d6603734aae41e4cf3aaf8ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -701,8 +714,8 @@ GameObject:
   - component: {fileID: 854102142}
   - component: {fileID: 854102141}
   - component: {fileID: 854102140}
-  m_Layer: 0
-  m_Name: Button
+  m_Layer: 9
+  m_Name: TriggerStrike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,7 +738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 322, y: -207}
+  m_AnchoredPosition: {x: 401, y: -280}
   m_SizeDelta: {x: 117.1, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854102140
@@ -750,7 +763,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.028301895, g: 0.027367398, b: 0.027367398, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -767,7 +780,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 854102141}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420030}
+        m_MethodName: changeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &854102141
@@ -975,7 +999,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 869105881}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1045,8 +1069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f339b1d45296f6f4098d2a521b7a1c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temp: {fileID: 1602678379}
-  temp2: {fileID: 854102140}
 --- !u!1 &951171618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1148,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!114 &951171621
@@ -1185,7 +1207,7 @@ GameObject:
   - component: {fileID: 1186635040}
   - component: {fileID: 1186635042}
   - component: {fileID: 1186635041}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1264,7 +1286,7 @@ GameObject:
   - component: {fileID: 1193440004}
   - component: {fileID: 1193440006}
   - component: {fileID: 1193440005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Miss_Real
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1375,7 +1397,7 @@ GameObject:
   - component: {fileID: 1306929919}
   - component: {fileID: 1306929918}
   - component: {fileID: 1306929917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,7 +1487,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.143, y: 0.029999733}
-  m_SizeDelta: {x: 780.562, y: 449.788}
+  m_SizeDelta: {x: 782.966, y: 449.788}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1388449121
 GameObject:
@@ -1557,7 +1579,7 @@ GameObject:
   - component: {fileID: 1463709797}
   - component: {fileID: 1463709799}
   - component: {fileID: 1463709798}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Points_Real
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1636,7 +1658,7 @@ GameObject:
   - component: {fileID: 1581596941}
   - component: {fileID: 1581596943}
   - component: {fileID: 1581596942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Miss_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1709,7 +1731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1602678380}
   - component: {fileID: 1602678379}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1784,7 +1806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 197, y: -207}
+  m_AnchoredPosition: {x: 242, y: -276}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1641535257
@@ -1874,6 +1896,8 @@ MonoBehaviour:
   enemy_missile_prefab: {fileID: 1687145456692728, guid: baf1ef8ce221af44ea2ba9f992e0a5aa,
     type: 3}
   enemy_parachuter: {fileID: 0}
+  slider: {fileID: 1602678379}
+  triggerStrike: {fileID: 854102140}
 --- !u!82 &1717141216
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2158,7 +2182,7 @@ GameObject:
   - component: {fileID: 1967656448}
   - component: {fileID: 1967656450}
   - component: {fileID: 1967656449}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

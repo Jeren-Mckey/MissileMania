@@ -39,7 +39,7 @@ public class MissileDrop : MonoBehaviour {
         }
         else if (col.gameObject.tag != "enemy"){
             DestroyMissile();
-            GlobalControl.addProgress();
+            EventManager.RaiseOnHit();
         }
     }
 

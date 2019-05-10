@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private static int _points;
     private float startTime;
     private float newTime;
     private float spawnFastTime;
@@ -16,11 +15,15 @@ public class GameManager : MonoBehaviour
     private float elapsedTime;
     public GameObject enemy_missile_prefab;
     public GameObject enemy_parachuter;
+    public Slider slider;
+    public Button triggerStrike;   //reference for button
 
-
+    public void OnEnable()
+    {
+        EventManager.onHit += addProgress;
+    }
     // Use this for initialization
     void Start () {
-        _points = 0;
         startTime = Time.time; //Time since start or since last difficulty change
         newTime = Time.time; //Time between missile drops
         elapsedTime = 1.6f; //How long before each missile drops
@@ -28,6 +31,8 @@ public class GameManager : MonoBehaviour
         spawnFastTime = 5f; //How long between spawning of fast rocket
         upDifficulty = false;
         gameObject.GetComponent<CameraShake>().enabled = false;
+        //triggerStrike.gameObject.SetActive(false);
+        slider.value = 0;
     }
 	
 	// Update is called once per frame
@@ -46,13 +51,13 @@ public class GameManager : MonoBehaviour
             "MainScene" && upDifficulty)
         {
             dropMissile(speed * 2 - 1f);
-            if (elapsedTime >= .9f)
+            if (elapsedTime >= 1f)
             {
                 elapsedTime = elapsedTime - .1f;
             }
             startTime = Time.time;
         }
-        if (SceneManager.GetActiveScene().name == "MainScene") text.text = _points.ToString();
+        if (SceneManager.GetActiveScene().name == "MainScene") text.text = GlobalControl.getPoints().ToString();
    	}
 
     public void dropMissile(float newSpeed)
@@ -66,10 +71,20 @@ public class GameManager : MonoBehaviour
         newTime = Time.time;
     }
 
-    public static void addPoints()
+    public void addProgress()
     {
-        _points += 1;
-        GlobalControl.addPoints(_points);
+        //if player triggers fire object and health is greater than 0
+        if(slider.value < 100){
+            slider.value += 5f;  //increase progress to explosion
+        }
+        else{ 
+            triggerStrike.gameObject.SetActive(true);
+            triggerStrike.enabled = true;
+        }
     }
 
+    public void OnDisable()
+    {
+        EventManager.onHit -= addProgress;
+    }
 }

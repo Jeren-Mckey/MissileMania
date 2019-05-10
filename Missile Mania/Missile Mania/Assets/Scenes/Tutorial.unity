@@ -279,7 +279,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StartMenu
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &423640520
@@ -539,8 +539,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211026349}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -65.31047, y: -28.29, z: -1.9910287}
-  m_LocalScale: {x: 1.3625, y: 1.1106584, z: 1.0440999}
+  m_LocalPosition: {x: -65.458, y: -28.29, z: -1.9910287}
+  m_LocalScale: {x: 1.5307057, y: 1.1106584, z: 1.0440999}
   m_Children: []
   m_Father: {fileID: 1492186868}
   m_RootOrder: 2
@@ -592,7 +592,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000014901161, y: 0}
+  m_Offset: {x: -0.016010523, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -603,7 +603,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.99770665, y: 1}
+  m_Size: {x: 15.120283, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1211026354
 SpriteRenderer:
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413231028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46271493e49b4a54db0a86764b4a311e, type: 3}
   m_Name: 
@@ -746,7 +746,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!1 &1492186867
@@ -758,7 +758,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1492186868}
-  - component: {fileID: 1492186869}
   m_Layer: 0
   m_Name: Tutorial
   m_TagString: Untagged
@@ -784,22 +783,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1492186869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492186867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5aca25198a8f3b43bbfc35a89b70f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  enemy_missile_prefab: {fileID: 1687145456692728, guid: baf1ef8ce221af44ea2ba9f992e0a5aa,
-    type: 3}
-  enemy_parachuter: {fileID: 0}
 --- !u!1 &1767216122
 GameObject:
   m_ObjectHideFlags: 0

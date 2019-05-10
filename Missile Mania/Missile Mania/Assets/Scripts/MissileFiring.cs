@@ -35,7 +35,7 @@ public class MissileFiring : MonoBehaviour {
     {
         if (col.gameObject.tag.Equals("enemy"))
         {
-            GameManager.addPoints();
+            GlobalControl.addPoints();
             isTriggered = true;
         }
     }
