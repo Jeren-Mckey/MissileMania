@@ -50,8 +50,8 @@ public class GameManager : MonoBehaviour
         if ((Time.time - startTime) > spawnFastTime && SceneManager.GetActiveScene().name ==
             "MainScene" && upDifficulty)
         {
-            dropMissile(speed * 2 - 1f);
-            if (elapsedTime >= 1f)
+            dropMissile(speed * 2 - 2f);
+            if (elapsedTime >= 1.1f)
             {
                 elapsedTime = elapsedTime - .1f;
             }

@@ -37,7 +37,12 @@ public class MissileDrop : MonoBehaviour {
         {
             isTriggered = true;
         }
-        else if (col.gameObject.tag != "enemy"){
+        else if (col.gameObject.name == "UltraRadius")
+        {
+            isTriggered = true;
+        }
+        else if (col.gameObject.tag != "enemy")
+        {
             DestroyMissile();
             EventManager.RaiseOnHit();
         }
