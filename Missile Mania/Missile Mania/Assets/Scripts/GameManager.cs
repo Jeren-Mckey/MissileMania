@@ -79,7 +79,6 @@ public class GameManager : MonoBehaviour
         }
         else{ 
             triggerStrike.gameObject.SetActive(true);
-            triggerStrike.enabled = true;
         }
     }
 
