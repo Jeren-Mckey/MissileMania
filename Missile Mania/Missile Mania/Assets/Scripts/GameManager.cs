@@ -77,7 +77,8 @@ public class GameManager : MonoBehaviour
         if(slider.value < 100){
             slider.value += 5f;  //increase progress to explosion
         }
-        else{ 
+        else{
+            slider.value = 0f;
             triggerStrike.gameObject.SetActive(true);
         }
     }

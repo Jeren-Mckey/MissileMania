@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UltraDefense : MonoBehaviour
 {
-    public float expansionRate;
     private float elapsedTime;
     private float time;
+    public Button ultraDefense;
     private Vector3 baseScale;
     private float endTime;
     private bool growing;
@@ -40,6 +41,7 @@ public class UltraDefense : MonoBehaviour
     public void startGrowing()
     {
         growing = true;
+        ultraDefense.gameObject.SetActive(false);
     }
 
 }
