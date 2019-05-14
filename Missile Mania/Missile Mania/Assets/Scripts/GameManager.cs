@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private float startTime;
+    private static bool holdGain;
     private float newTime;
     private float spawnFastTime;
     private float speed;
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
         spawnFastTime = 5f; //How long between spawning of fast rocket
         upDifficulty = false;
         gameObject.GetComponent<CameraShake>().enabled = false;
-        //triggerStrike.gameObject.SetActive(false);
+        triggerStrike.gameObject.SetActive(false);
         slider.value = 0;
     }
 	
@@ -74,11 +75,12 @@ public class GameManager : MonoBehaviour
     public void addProgress()
     {
         //if player triggers fire object and health is greater than 0
-        if(slider.value < 100){
+        if(slider.value < 100 && !holdGain){
             slider.value += 5f;  //increase progress to explosion
         }
         else{
             slider.value = 0f;
+            holdGain = true;
             triggerStrike.gameObject.SetActive(true);
         }
     }
@@ -86,5 +88,10 @@ public class GameManager : MonoBehaviour
     public void OnDisable()
     {
         EventManager.onHit -= addProgress;
+    }
+
+    public static void stopHold()
+    {
+        holdGain = false;
     }
 }

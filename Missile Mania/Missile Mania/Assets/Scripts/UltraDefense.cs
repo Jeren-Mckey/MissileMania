@@ -41,6 +41,7 @@ public class UltraDefense : MonoBehaviour
     public void startGrowing()
     {
         growing = true;
+        GameManager.stopHold();
         ultraDefense.gameObject.SetActive(false);
     }
 
