@@ -59,7 +59,7 @@ public class MissileFiring : MonoBehaviour {
             movementVector = new Vector2(
                     touchPos.x - transform.position.x,
                     touchPos.y - transform.position.y).normalized * speed;
-            if (movementVector.y < 2f) movementVector.y = 2f;
+            if (movementVector.y < 1.6f) movementVector.y = 1.6f;
         }
     }
 }

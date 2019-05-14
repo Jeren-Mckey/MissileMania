@@ -1759,7 +1759,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 238372582}
   m_FillRect: {fileID: 1967656448}
   m_HandleRect: {fileID: 238372580}
@@ -2257,8 +2257,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977418559}
   m_LocalRotation: {x: -0.008825034, y: -0.008741487, z: -0.0017365236, w: 0.9999213}
-  m_LocalPosition: {x: -0.0006, y: 0.4559, z: 1.0029}
-  m_LocalScale: {x: 0.6, y: 0.70872, z: 0.30205354}
+  m_LocalPosition: {x: 0, y: 0.757, z: 0.998}
+  m_LocalScale: {x: 0.6, y: 0.5095697, z: 0.30205354}
   m_Children: []
   m_Father: {fileID: 951171619}
   m_RootOrder: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LauncherVector : MonoBehaviour {
 
@@ -28,7 +29,11 @@ public class LauncherVector : MonoBehaviour {
                     Vector2 direction = new Vector2(
                         touchPos.x - gameObject.transform.position.x,
                         touchPos.y - gameObject.transform.position.y);
-                    if (direction.y < 2f) direction.y = 2f;
+                    if (direction.y < 1f){
+                        direction.y = 1f;
+                        if (direction.x >= transform.position.x) direction.x =  0 + Screen.width / 2;
+                        else if (direction.x <= transform.position.x) direction.x = 0 - Screen.width / 2;
+                    }
                     gameObject.transform.up = direction;
                     Instantiate(missilePrefab, transform.position, Quaternion.identity).SendMessage("theStart", myTouch);
                     lastTime = currentTime;
