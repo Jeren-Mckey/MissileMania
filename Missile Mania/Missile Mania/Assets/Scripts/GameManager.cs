@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             dropMissile(speed);
             newTime = Time.time;
         }
-        if (Time.time - startTime >= 18f && !upDifficulty)
+        if (Time.time - startTime >= 19f && !upDifficulty)
         {
             upDifficulty = true; //After 15 seconds start spawning fast missiles
         }
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
             "MainScene" && upDifficulty)
         {
             dropMissile(speed * 2 - 2f);
-            if (elapsedTime >= 1.1f)
+            if (elapsedTime >= 1f)
             {
                 elapsedTime = elapsedTime - .1f;
             }

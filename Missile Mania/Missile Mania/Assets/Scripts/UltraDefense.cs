@@ -28,7 +28,7 @@ public class UltraDefense : MonoBehaviour
         {
             time = Time.time;
             endTime += .1f;
-            transform.localScale += new Vector3(5F, 5F, 5F);
+            transform.localScale += new Vector3(1.75F, 1.75F, 1.75F);
         }
         if (endTime >= .8f)
         {

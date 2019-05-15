@@ -35,6 +35,10 @@ public class EndGame : MonoBehaviour {
         else if (add_miss >= 3 &&  (Time.fixedTime >= (wait + .75)))
         {
             SceneManager.LoadScene("EndScreen");
+        } 
+        else if (GlobalControl.getPoints() == 200 && (Time.fixedTime >= (wait + .75)))
+        {
+            SceneManager.LoadScene("WinnerScene");
         }
         else wait = Time.fixedTime;
         if (started)
@@ -45,7 +49,7 @@ public class EndGame : MonoBehaviour {
                 time = -1f;
                 started = false;
                }
-        }
+        }      
         
     }
 
