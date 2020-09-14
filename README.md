@@ -4,7 +4,6 @@ Missile Mania is a simple and addictive 2-D defense game where the objective is 
 ## Development Tools
 
 * [Unity](https://unity3d.com/) - Gameplay Programming and animation done using Unity
-* [Amazon Web Services](https://aws.amazon.com/) - Used for player data storage
 
 ## Authors
 
