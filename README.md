@@ -1,5 +1,5 @@
 # MissileMania
-Missile Mania is a simple and addictive 2-D defense game where the objective is to survive the raining enemy missiles for as long as possible. The player controlls a missile cannon that is used to shoot the projectiles out of the sky and keep the city safe. This is game is currently in development and slated to be released on the Android platform by April, 2019. 
+Missile Mania is a simple and addictive 2-D defense game where the objective is to survive the raining enemy missiles for as long as possible. The player controlls a missile cannon that is used to shoot the projectiles out of the sky and keep the city safe. This is game was released on the Android platform in April, 2019. Currently removed from the playstore and only available via direct apk download.
 
 ## Development Tools
 
